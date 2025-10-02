@@ -72,6 +72,28 @@ html, body {
 }
 
 
+.happy-image-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.happy-image-inner .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;  /* fade effect */
+}
+
+.happy-image-inner .slide.active {
+  opacity: 1;
+  position: relative;  /* keep active one in flow */
+}
+
+
+
 @media (max-width: 768px) {
   .happy-image {
     width: 100%;      /* full width on mobile */
@@ -79,6 +101,9 @@ html, body {
   }
 }
 /* end of HAPPY */
+
+
+
 
 
 
