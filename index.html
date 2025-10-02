@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Growth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hero-header">
+  <img src="Background.png" alt="Digital Growth Header with Logo" class="header-bg">
+</header>
+
+<!-- end of HEADER -->  
+
+
+
+
+
+
+
+
+  
+
+<!-- HAPPY IMAGE -->
+<section class="happy-image">
+  <div class="happy-image-inner">
+    <img src="happy.jpg" alt="Happy customer holding official documents">
+    <div class="badge">
+   </div>
+</section>
+<!-- end of HAPPY IMAGE -->
+
+
+
+
+
+
+
+  
+
+<!-- FAST RELIABLE -->
+<section class="fast">
+  <p class="subtitle">Digital Loans, No Hustle, Simple Loans</p>
+  <a href="whatsapp://send?phone=+264817859603&text=Hi,%20I%20would%20like%20to%20apply%20for%20a%20loan" class="btn">
+  Apply Now
+</a>
+</section>
+
+
+
+
+
+
+
+  
+
+<!-- PAYDAY LOANS + DOCUMENTS -->
+<section class="payday">
+  <h2>PAYDAY LOANS</h2>
+  <p class="interest">30% Interest Rate</p>
+  <hr>
+  
+  
+  
+  <!-- DOCUMENTS REQUIRED -->
+  <h2 class="docs-title">Documents Required</h2>
+
+<div class="text-container 1">
+  <p>🆔 I.D Copy</p>  
+</div>
+
+<div class="text-container 2">
+  <p>📋 3 Months Bank Statement</p>  
+</div>
+
+
+<div class="text-container 2">
+  <p>📑 Recent Payslip</p>  
+</div>
+  <!-- end of DOCUMENTS REQUIRED -->
+  
+  
+  
+  
+  
+  
+  
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <ul class="docs-list">
+    <li>Apply online in minutes — quick and hassle-free.</li>
+    <li>Upload your documents securely with encryption.</li>
+    <li>Get approval within 24 hours — sometimes even faster!</li>
+    <li>Receive your money directly to your bank account instantly.</li>
+  </ul>
+</section>
+
+<!-- end of HOW IT WORKS -->
+
+
+
+
+
+  
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us">
+  <h2>Why Choose Us?</h2>
+  <div class="why-cards">
+    <div class="why-card">
+      <div class="icon">💻</div>
+      <h4>100% Online Process</h4>
+      <p>No physical office needed — apply entirely online.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h4>Fast Approval</h4>
+      <p>Quick turnaround time, usually within 24 hours.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h4>Transparent Rates</h4>
+      <p>Interest rates are clear, with no hidden fees.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h4>Friendly Support</h4>
+      <p>Our customer support is helpful and reliable.</p>
+    </div>
+  </div>
+</section>
+<!-- end of WHY CHOOSE US -->
+
+
+
+
+
+
+
+
+  
+
+<!-- LOAN CALCULATOR -->
+<section class="loan-calculator">
+  <h2>Loan Calculator</h2>
+  <label for="amount">Loan Amount (N$):</label>
+  <input type="number" id="amount" min="500" value="500" placeholder="Enter amount">
+  <small>Minimum amount to borrow is 500</small>
+
+  <label for="months">Repayment Period (months):</label>
+  <input type="number" id="months" min="1" value="1" placeholder="Enter months">
+
+  <button onclick="calculateLoan()">Calculate</button>
+  <p id="result"></p>
+</section>
+<!-- end of LOAN CALCULATOR -->
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Digital Growth</p>
+  <p>P.O Box 123 Windhoek</p>
+  <p>Contacts: 0812345687</p>
+</section>
+<!-- end of CONTACT -->
+
+
+
+
+
+  
+  <!-- Apply Now Button -->
+ <div class="cta-btn-container">
+  <a href="whatsapp://send?phone=+264817859603&text=Hi,%20I%20would%20like%20to%20apply%20for%20a%20loan" class="cta-btn">
+  Apply Now
+</a>
+</div>
+   <!-- end of Apply Now Button -->
+  
+
+
+
+
+
+
+  
+  
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <a href="#top" class="back-to-top">Return to Top</a>
+  </div>
+
+  <div class="footer-middle">
+    <p>Contact us today</p>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Digital Growth. All rights reserved.</p>
+    <p>Website Designed by: Arroja Enterprises\Tech</p>
+  </div>
+</footer>
+<!-- end of Footer -->
+
+
+
+
+
+  
+
+
+
+<!-- DISCLAIMER -->
+<section class="disclaimer">
+  <h3>Disclaimer</h3>
+  <p>
+    Approval of applications is subject to our internal assessment criteria and responsible lending practices. We carefully review each request to ensure it meets our requirements, and we may not be able to provide funding in all cases.
+  </p>
+</section>
+
+
+<!-- end of DISCLAIMER -->
+
+
+
+
+  
+
+
+
+  
+  
+
+
+<!-- BASIC JS FOR LOAN CALCULATOR -->
+<script>
+function calculateLoan() {
+  let amount = parseFloat(document.getElementById('amount').value);
+  let months = parseInt(document.getElementById('months').value);
+  let interestRate = 0.30;
+
+  if (isNaN(amount) || isNaN(months) || months <= 0) {
+    document.getElementById('result').innerText = "Please enter valid values.";
+    return;
+  }
+
+  let total = amount + (amount * interestRate);
+  document.getElementById('result').innerText = `Total Repayment: N$ ${total.toFixed(2)}`;
+}
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+<!-- Sparkle Script -->
+<script>
+  const header = document.querySelector('.hero-header');
+  const headerHeight = header.offsetHeight;
+  const headerWidth = header.offsetWidth;
+
+  // Define no-sparkle zone (adjust values to your logo area)
+  const noZone = {
+    top: 30,    // % from top
+    left: 30,   // % from left
+    width: 40,  // % width of zone
+    height: 40  // % height of zone
+  };
+
+  for (let i = 0; i < 40; i++) {
+    let top, left;
+    do {
+      top = Math.random() * 100;
+      left = Math.random() * 100;
+    } while (
+      top > noZone.top &&
+      top < noZone.top + noZone.height &&
+      left > noZone.left &&
+      left < noZone.left + noZone.width
+    );
+
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.top = top + '%';
+    sparkle.style.left = left + '%';
+    const size = 2 + Math.random() * 3;
+    sparkle.style.width = sparkle.style.height = size + 'px';
+    sparkle.style.opacity = 0.5 + Math.random() * 0.5;
+    sparkle.style.animationDuration = (25 + Math.random() * 5) + 's'; <!-- 5+ -->
+    header.appendChild(sparkle);
+  }
+</script>
+<!-- end of Sparkle Script -->
+
+
+
+
+
+  
+</body>
+</html>
