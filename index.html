@@ -26,13 +26,16 @@
 
 <!-- HAPPY IMAGE -->
 <section class="happy-image">
-  <div class="happy-image-inner">
-    <img src="happy.jpg" alt="Happy customer holding official documents">
-    <div class="badge">
-   </div>
+  <div class="happy-image-inner slider">
+    <div class="slide">
+      <img src="happy.jpg" alt="Happy customer holding official documents">
+    </div>
+    <div class="slide">
+      <img src="Elevate.png" alt="Image Promoting the Website">
+    </div>
+  </div>
 </section>
 <!-- end of HAPPY IMAGE -->
-
 
 
 
@@ -320,6 +323,43 @@ function calculateLoan() {
 
 
 
+
+
+
+<!-- HAPPY SLIDER EFFECT --> 
+ <script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.happy-image-inner .slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+  currentIndex = index;
+}
+
+// show first image
+showSlide(0);
+
+// run first change after 1s, then every 4s
+setTimeout(() => {
+  setInterval(() => {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 4000);
+}, 1000);
+</script>
+
+ <!-- end of HAPPY SLIDER EFFECT --> 
+
+
+
+
+
+
+
+
+  
 
   
 </body>
